@@ -1,224 +1,100 @@
-/* ===========================
-   Basic Reset & Fonts
-=========================== */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
-@import url("fontawesome-all.min.css");
+/* ============================================================
+   Editorial by HTML5 UP - Customized for Aayush's Market Insights
+   ============================================================ */
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
-img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u,
-i, center, dl, dt, dd, ol, ul, fieldset, form, label, legend, table, caption,
-tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
-summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  vertical-align: baseline;
+/* Basic Reset */
+body, html, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike,
+strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0; padding: 0; border: 0;
+  font-size: 100%; font: inherit; vertical-align: baseline;
 }
-
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 body {
+  line-height: 1; background: #ffffff; color: #7f888f;
   font-family: 'Open Sans', sans-serif;
-  font-size: 13pt;
-  line-height: 1.65;
-  color: #7f888f;
-  background: #ffffff;
 }
+ol, ul { list-style: none; }
+a { color: #f56a6a; text-decoration: none; transition: 0.2s; }
+a:hover { color: #f67878; }
 
-a {
-  color: #f56a6a;
-  text-decoration: none;
-  border-bottom: dotted 1px;
-  transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-}
-a:hover {
-  color: #f67878;
-  border-bottom-color: #f67878;
-}
+/* Wrapper & Main */
+#wrapper { display: flex; flex-direction: row-reverse; min-height: 100vh; }
+#main { flex-grow: 1; }
+#main > .inner { padding: 0 6em 0.1em 6em; max-width: 110em; margin: 0 auto; }
 
-/* ===========================
-   Wrapper & Layout
-=========================== */
-#wrapper {
-  display: flex;
-  flex-direction: row-reverse;
-  min-height: 100vh;
-}
-
-/* Main Content */
-#main {
-  flex-grow: 1;
-  width: 100%;
-}
-#main > .inner {
-  padding: 0 6em 0.1em 6em;
-  margin: 0 auto;
-  max-width: 110em;
-}
-
-/* Sidebar */
-#sidebar {
-  flex-shrink: 0;
-  width: 26em;
-  background-color: #f5f6f7;
-  font-size: 0.9em;
-  position: relative;
-  transition: margin-left 0.5s ease, box-shadow 0.5s ease;
-}
-#sidebar > .inner {
-  padding: 2.2em;
-}
-#sidebar .toggle {
-  position: absolute;
-  left: 26em;
-  top: 0;
-  width: 6em;
-  height: 7.5em;
-  text-indent: -15em;
-}
-#sidebar.inactive {
-  margin-left: -26em;
-}
-
-/* ===========================
-   Header
-=========================== */
-#header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: solid 5px #f56a6a;
-  padding: 6em 0 1em 0;
-}
-#header .logo {
-  font-family: "Roboto Slab", serif;
-  font-size: 1.125em;
-}
-#header .icons li {
-  display: inline-block;
-  padding-right: 1em;
-}
-
-/* ===========================
+/* ============================================================
    Homepage Title + Image
-=========================== */
+   ============================================================ */
 .title-with-image {
   display: flex;
   align-items: flex-start;
   gap: 30px;
   margin-bottom: 3em;
 }
-.title-with-image .text {
-  flex: 1;
-}
-.title-with-image .text h1 {
-  font-size: 3em;
-  margin-bottom: 0.25em;
-  color: #3d4449;
-  font-family: "Roboto Slab", serif;
-}
-.title-with-image .text p {
-  margin-bottom: 0.75em;
-}
-.title-with-image .image {
-  width: 400px;
-  flex-shrink: 0;
-}
-.title-with-image .image img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
+.title-with-image .text { flex: 1; }
+.title-with-image .text h1 { font-size: 3em; margin-bottom: 0.25em; }
+.title-with-image .text p { margin-bottom: 0.75em; }
+.title-with-image .image { width: 400px; flex-shrink: 0; }
+.title-with-image .image img { width: 100%; height: auto; border-radius: 5px; }
 @media screen and (max-width: 980px) {
-  .title-with-image {
-    flex-direction: column;
-  }
-  .title-with-image .image {
-    width: 100%;
-    margin-top: 1em;
-  }
+  .title-with-image { flex-direction: column; }
+  .title-with-image .image { width: 100%; margin-top: 1em; }
 }
 
-/* ===========================
-   Banner Section
-=========================== */
-#banner {
-  display: flex;
-  align-items: center;
-  margin-bottom: 3em;
-}
-#banner .content {
-  flex: 1;
-}
-#banner .image {
-  flex: 1;
-  margin-left: 2em;
-}
-#banner .image img {
-  width: 100%;
-  border-radius: 5px;
-}
+/* Banner */
+#banner { display: flex; flex-direction: column; margin-bottom: 3em; }
+#banner .content { flex-grow: 1; }
+#banner .image { margin-top: 2em; }
+#banner .image img { width: 100%; border-radius: 5px; }
 
-/* ===========================
-   Featured Articles
-=========================== */
+/* Featured Articles Section */
 .features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
+  display: flex; flex-wrap: wrap; gap: 2em; margin-bottom: 3em;
 }
 .features article {
   flex: 1 1 calc(50% - 2em);
-  display: flex;
-  flex-direction: column;
+  display: flex; flex-direction: row; align-items: flex-start;
+  background: #f5f6f7; border-radius: 5px; padding: 1.5em;
 }
-.features article img {
-  display: none; /* remove images from featured articles */
+.features article .icon {
+  font-size: 2.5rem; margin-right: 1em; color: #f56a6a; flex-shrink: 0;
 }
+.features article .content h3 { font-size: 1.25em; margin-bottom: 0.5em; }
+.features article .content p { margin-bottom: 0.5em; }
 
-/* ===========================
-   Latest Posts
-=========================== */
-.posts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
+/* Latest Posts Section */
+.posts { display: flex; flex-wrap: wrap; gap: 2em; margin-bottom: 3em; }
+.posts article {
+  flex: 1 1 calc(50% - 2em);
+  background: #f5f6f7; border-radius: 5px; padding: 1em;
 }
-.posts article img {
-  width: 100%;
-  border-radius: 5px;
-}
+.posts article .image img { width: 100%; border-radius: 5px; }
 
-/* ===========================
-   Buttons
-=========================== */
+/* Buttons */
 .button {
   display: inline-block;
   padding: 0.75em 1.5em;
-  background-color: #f56a6a;
-  color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-  border-radius: 5px;
-  text-align: center;
-  transition: background-color 0.2s ease;
+  background-color: #f56a6a; color: #fff;
+  font-weight: 700; text-transform: uppercase;
+  border-radius: 5px; text-align: center; cursor: pointer;
 }
-.button:hover {
-  background-color: #f67878;
-}
+.button:hover { background-color: #f67878; }
 
-/* ===========================
-   Responsive Adjustments
-=========================== */
-@media screen and (max-width: 1280px) {
-  #main > .inner { padding: 0 4em; }
-}
-@media screen and (max-width: 736px) {
-  #main > .inner { padding: 0 2em; }
-  #header { padding-top: 6.5em; }
-  .title-with-image { flex-direction: column; }
-  .title-with-image .image { width: 100%; margin-top: 1em; }
-  #banner { flex-direction: column; }
-  #banner .image { margin-left: 0; margin-top: 1em; }
-}
+/* Sidebar */
+#sidebar { flex-shrink: 0; width: 26em; background: #f5f6f7; padding: 2em; }
+#sidebar h2 { font-size: 1.38889em; margin-bottom: 1em; }
+
+/* Footer */
+#footer { margin-top: 4em; text-align: center; font-size: 0.9em; color: #9fa3a6; }
+
+/* Responsive adjustments */
+@media screen and (max-width: 1280px) { #main > .inner { padding: 0 4em; } }
+@media screen and (max-width: 980px) { .features, .posts { flex-direction: column; } }
+@media screen and (max-width: 736px) { #main > .inner { padding: 0 2em; } .title-with-image { flex-direction: column; } .title-with-image .image { width: 100%; } }
