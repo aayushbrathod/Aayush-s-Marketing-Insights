@@ -2409,3 +2409,20 @@ html {
   max-width: 100%;
   overflow: hidden;
 }
+
+/* Live Markets styling */
+#live-markets {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+#live-markets h2 {
+  margin-bottom: 15px;
+}
+
+#live-markets .tradingview-widget-container,
+#live-markets iframe {
+  max-width: 100%;
+  overflow: hidden;
+}
