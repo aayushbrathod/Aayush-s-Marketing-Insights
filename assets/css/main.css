@@ -2277,11 +2277,12 @@ button,
 .title-with-image {
     display: flex;
     align-items: center;
-    gap: 15px; /* space between image and title */
+    gap: 30px; /* more space between text and image */
 }
 
 .title-with-image img {
-    width: 80px; /* adjust as needed */
+    width: 250px; /* increase width */
+    max-width: 100%; /* prevents it from overflowing on smaller screens */
     height: auto;
-    border-radius: 5px; /* optional, rounded corners */
+    border-radius: 5px; /* optional */
 }
