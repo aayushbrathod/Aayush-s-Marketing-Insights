@@ -2392,3 +2392,13 @@ button,
 html {
   scroll-behavior: smooth;
 }
+
+#live-markets {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+#live-markets h2 {
+  margin-bottom: 15px;
+}
