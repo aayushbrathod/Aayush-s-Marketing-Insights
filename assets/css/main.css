@@ -2435,3 +2435,21 @@ html {
   display: block;
   overflow: hidden; /* prevents widget from breaking layout */
 }
+
+.start-here h2 {
+  margin-top: 30px;
+}
+
+.start-here section {
+  margin: 40px 0;
+}
+
+.start-here .intro {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.start-here ul,
+.start-here ol {
+  margin-left: 20px;
+}
