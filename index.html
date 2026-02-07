@@ -184,34 +184,58 @@
 					</section>
 
 					<!-- Newsletter Signup Section -->
-					<section id="newsletter">
-						<header class="major">
-							<h2>Sign Up for Newsletter</h2>
-							<p>Get the latest market insights delivered straight to your inbox.</p>
-						</header>
+<section id="newsletter">
+  <header class="major">
+    <h2>Sign Up for Newsletter</h2>
+    <p>Get the latest market insights delivered straight to your inbox.</p>
+  </header>
 
-						<form method="post">
-							<div class="fields">
-								<div class="field half">
-									<label for="newsletter-name">Name</label>
-									<input type="text" name="newsletter-name" id="newsletter-name" placeholder="Your Name" />
-								</div>
-								<div class="field half">
-									<label for="newsletter-email">Email</label>
-									<input type="email" name="newsletter-email" id="newsletter-email" placeholder="Your Email" />
-								</div>
-							</div>
-							<ul class="actions">
-								<li><input type="submit" value="Subscribe" class="button primary" /></li>
-								<li><input type="reset" value="Reset" class="button" /></li>
-							</ul>
-							<p><em>Note: This form is currently static and won’t actually send emails.</em></p>
-						</form>
-					</section>
+  <form action="https://formspree.io/f/xjgevrjb" method="POST">
+    <div class="fields">
+      <div class="field half">
+        <label for="newsletter-name">Name</label>
+        <input 
+          type="text" 
+          name="name" 
+          id="newsletter-name" 
+          placeholder="Your Name" 
+          required
+        />
+      </div>
+      <div class="field half">
+        <label for="newsletter-email">Email</label>
+        <input 
+          type="email" 
+          name="email" 
+          id="newsletter-email" 
+          placeholder="Your Email" 
+          required
+        />
+      </div>
+    </div>
 
-				</div> <!-- close inner -->
-			</div> <!-- close main -->
+    <ul class="actions">
+      <li>
+        <input type="submit" value="Subscribe" class="button primary" />
+      </li>
+      <li>
+        <input type="reset" value="Reset" class="button" />
+      </li>
+    </ul>
+  </form>
+</section>
+					<p id="success-msg" style="display:none; color:#1e90ff;">
+  ✅ Thanks for signing up!
+</p>
 
+<script>
+  const form = document.querySelector(".signup-form");
+  const msg = document.getElementById("success-msg");
+
+  form.addEventListener("submit", () => {
+    msg.style.display = "block";
+  });
+</script>
 			<!-- Sidebar -->
 			<div id="sidebar">
 				<div class="inner">
@@ -242,6 +266,7 @@
 
 	</body>
 </html>
+
 
 
 
