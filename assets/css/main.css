@@ -2546,3 +2546,45 @@ html {
   position: relative;
   z-index: 1;
 }
+
+/* Top navigation (replaces sidebar) */
+#top-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #ffffff;
+	border-bottom: 1px solid #e6e6e6;
+	z-index: 10001;
+}
+
+#top-nav .nav-inner {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1em 2em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#top-nav .nav-logo {
+	font-weight: 700;
+	text-decoration: none;
+	color: #111;
+}
+
+#top-nav .nav-links a {
+	margin-left: 1.5em;
+	text-decoration: none;
+	color: #555;
+	font-weight: 500;
+}
+
+#top-nav .nav-links a:hover {
+	color: #f56a6a;
+}
+
+/* Prevent content hiding under fixed nav */
+body {
+	padding-top: 4.5em;
+}
