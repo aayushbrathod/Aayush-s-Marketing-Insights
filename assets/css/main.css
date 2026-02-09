@@ -2517,7 +2517,7 @@ html {
 
 /* Fix sidebar being hidden behind content */
 #sidebar {
-  position: fixed;
+  position: fixed; 
   z-index: 10000;
 }
 
@@ -2526,6 +2526,23 @@ html {
 #banner,
 #live-markets,
 .inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* === Sidebar stacking fix (do not remove) === */
+
+/* Ensure sidebar always sits on top */
+#sidebar {
+  position: fixed;
+  z-index: 10000;
+}
+
+/* Ensure main content cannot overlay sidebar */
+#main,
+#banner,
+#live-markets,
+#wrapper {
   position: relative;
   z-index: 1;
 }
